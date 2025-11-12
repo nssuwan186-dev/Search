@@ -46,7 +46,7 @@ main() {
         # Confirmation with timeout
         read -t 30 -n1 -p "Install this package? [Y/n/q]: " install
         
-        case "${install,,}" in
+        case "${install}" in
             "" | "y" | "Y")
                 
                 if apt install -y $package; then
@@ -73,5 +73,3 @@ main() {
 }
 
 main
-
-

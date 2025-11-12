@@ -46,7 +46,7 @@ main() {
         read -t 30 -n1 -p "Uninstall this package(s)? [Y/n/q]: " uninstall
         echo  # Add newline after read
         
-        case "${uninstall,,}" in
+        case "${uninstall}" in
             "y" | "")
                 if apt remove -y $package && apt autoremove -y; then
                     echo
